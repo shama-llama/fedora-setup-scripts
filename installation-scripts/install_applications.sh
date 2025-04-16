@@ -54,6 +54,18 @@ install_vscode() {
   fi
 }
 
+# Function to install Starship
+install_starship() {
+  echo "Installing Starship..."
+  curl -sS https://starship.rs/install.sh | sh
+  if [ $? -eq 0 ]; then
+    echo "Starship prompt installed successfully!"
+  else
+    echo "Failed to install Starship. Exiting."
+    exit 1
+  fi
+}
+
 # Main script execution
 echo "Updating package repositories with dnf..."
 sudo dnf update -y
@@ -65,6 +77,7 @@ install_package cpufetch
 install_package fastfetch
 install_package lsd
 install_package ncdu
+install_starship
 
 echo "Installing language support..."
 install_group python-classroom
@@ -117,5 +130,10 @@ install_package telegram-desktop
 
 echo "Installing library applications..."
 install_package calibre
+
+echo "Installing game launchers..."
+install_package lutris
+install_package steam
+install_package wine
 
 echo "All requested applications and tools have been installed successfully!"
