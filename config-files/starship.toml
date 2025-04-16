@@ -28,12 +28,12 @@ $time\
 $fill
 $line_break$character"""
 
-palette = 'gruvbox_light'
+palette = 'gruvbox_dark'
 
-[palettes.gruvbox_light]
-color_fg0 = '#282828'
-color_bg1 = '#ebdbb2'
-color_bg3 = '#bdae93'
+[palettes.gruvbox_dark]
+color_fg0 = '#fbf1c7'
+color_bg1 = '#3c3836'
+color_bg3 = '#665c54'
 color_blue = '#458588'
 color_aqua = '#689d6a'
 color_green = '#98971a'
