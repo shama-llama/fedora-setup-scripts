@@ -15,11 +15,6 @@ install_starship() {
   curl -sS https://starship.rs/install.sh | sh
 }
 
-install_graphdb() {
-    echo "Installing GraphDB Desktop..."
-    sudo dnf install -y https://download.ontotext.com/owlim/0f89dcaa-25d2-11f0-bf83-42843b1b6b38/graphdb-desktop-11.0.1-1.x86_64.rpm
-}
-
 neo4j_repo_content="
 [neo4j]
 name=Neo4j RPM Repository
@@ -87,7 +82,6 @@ sudo dnf install \
     postgresql* \
     postgis \
     neo4j
-install_graphdb
 
 # --- Development Tools ---
 echo "Installing development tools..."
@@ -175,4 +169,4 @@ sudo dnf install \
     steam \
     wine
 
-echo "All requested applications and tools have been installed successfully!"
+echo "All applications and tools have been installed successfully!"
