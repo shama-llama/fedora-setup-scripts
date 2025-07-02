@@ -9,4 +9,3 @@ sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 sudo dnf update -y @core
 
 echo "All configurations completed successfully!"
-
