@@ -2,12 +2,9 @@
 
 echo "Starting multimedia support configuration..."
 
-# Swap ffmpeg-free with ffmpeg
-echo "Swapping ffmpeg-free with ffmpeg..."
+sudo dnf group install Multimedia
 sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y
-
-# Update multimedia packages
-echo "Updating multimedia packages..."
 sudo dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y
+sudo dnf install intel-media-driver
 
 echo "Multimedia support configuration completed successfully!"
